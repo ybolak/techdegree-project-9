@@ -1,2 +1,2 @@
-# techdegree-project-9
+# Techdegree Project 9_Capstone Portfolio
  Capstone Portfolio
