@@ -1,3 +1,50 @@
 * {
-    font-family: $font-family-body;
+    font-family: $font-family-primary;
+}
+
+h1 {
+    font-size: $font-size-big;
+}
+
+.section-title {
+    text-transform: uppercase;
+}
+
+
+/*===== NAV =====*/
+
+.menu-link {
+    color: $black;
+    font-size: $font-size-normal;
+}
+
+
+/*===== Home =====*/
+
+.home-title {
+    text-shadow: 20px 17px 15px black;
+}
+
+
+/*===== About =====*/
+
+.about-text {
+    h2 {
+        font-family: $font-family-secondary;
+    }
+}
+
+
+/*===== Skills =====*/
+
+.skills-subtitle {
+    font-family: $font-family-secondary;
+    font-size: 1.25rem;
+}
+
+
+/*===== Portfolio =====*/
+
+.portfolio-link-name {
+    color: $black;
 }

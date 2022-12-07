@@ -1,6 +1,6 @@
 
 /* ============================================= */
-/*            Descriptive colors                 */
+/*              Descriptive colors               */
 /* ============================================= */
 
 $lunar-green: #374D3E;
@@ -12,7 +12,7 @@ $nevada: #697477;
 
 
 /* ============================================= */
-/*          　　　　　Base Style colors  　               */
+/*          　　　　　  Base Style colors  　             */
 /* ============================================= */
 
 $color-primary: $lunar-green;
@@ -23,10 +23,11 @@ $color-dark: $pickled-bluewood;
 
 
 $font-color-primary: $nevada;
+$black: black;
 
 
 /* ============================================= */
-/*                Base Styles                    */
+/*                 Base Styles                   */
 /* ============================================= */
 
 $header-height: 3rem;
@@ -46,7 +47,8 @@ $z-fixed: 100;
 /*                 Typography                    */
 /* ============================================= */
 
-$font-family-body: 'Montserrat', sans-serif;
+$font-family-primary: 'Montserrat', sans-serif;
+$font-family-secondary: 'Esteban', serif;
 
 $font-wight-medium: 500;
 
@@ -61,7 +63,7 @@ $font-size-h2: 1.25rem;
 
 
 /* ============================================= */
-/*              Media Queries                    */
+/*                Media Queries                  */
 /* ============================================= */
 
 $sm-break:                768px;

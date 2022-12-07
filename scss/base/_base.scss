@@ -9,8 +9,7 @@ html {
 }
 
 body {
-    margin: $header-height 0 0 0;
-    font-family: $font-family-body;
+    font-family: $font-family-primary;
     font-size: $font-size-normal;
     font-weight: $font-wight-medium;
     color: $color-white;
@@ -32,21 +31,64 @@ ul {
 
 a {
     text-decoration: none;
-    color: $font-color-primary;
+    color: $color-white;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+section {
+    min-height: 100vh;
 }
 
-nav {
-    padding: 1rem;
+.section-title {
+    text-align: center;
+}
+
+/*===== About =====*/
+
+.about-container {
+    text-align: center;
+}
+
+.about-text {
+    padding: 0 50px 50px;
+
+    h2,
+    p {
+        padding: 20px 20px;
+    }
+}
+
+.about-social {
+    padding: 30px 0;
+}
+
+.about-social-icon {
+    i {
+        font-size: 1.5rem;
+        padding: 10px 10px;
+    }
+}
+
+
+/*===== Skills =====*/
+
+.skills-container {
+    padding: 30px 50px;
+}
+
+.skills-list {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    padding: 30px 0;
 }
 
 
 
+/*===== Portfolio =====*/
+
+.portfolio-container {
+    padding: 30px 50px;
+}
+
+.portfolio-link {
+    text-align: center;
+}

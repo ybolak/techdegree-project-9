@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Esteban&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <!-- Box Icons -->
@@ -18,13 +21,15 @@
 <body>
     <header>
         <nav>
-            <div>Yuko Bolak</div>
+            <div>
+                <a href="#" class="nave-logo">Yuko Bolak</a>
+            </div>
 
-            <div class="off-screen-menu">
-                <ul>
-                    <li><a href="#about" class="menu-link active">about</a></li>
+            <div class="off-screen-container">
+                <ul class="off-screen-menu">
+                    <li><a href="#about" class="menu-link">about</a></li>
                     <li><a href="#skills" class="menu-link">skills</a></li>
-                    <li><a href="portfolio" class="menu-link">portfolio</a></li>
+                    <li><a href="#portfolio" class="menu-link">portfolio</a></li>
                     <li><a href="#contact" class="menu-link">contact</a></li>
                 </ul>
             </div>
@@ -40,7 +45,7 @@
     <main>
         <section id="home">
             <div class="home-container bd-grid">
-                <h1 class="home-title"><span>Hello,</span>I'm Yuko.</h1>
+                <h1 class="home-title"><span>Hello,</span><br>I'm Yuko.</h1>
 
                 <div class="home-scroll">
                     <a href="#about" class="home-scroll-link"><i class="bx bx-up-arrow-alt"></i>scroll down</a>
@@ -53,12 +58,13 @@
         <section id="about" class="about section">
             <h2 class="section-title">about</h2>
 
-            <div class="about-container bd-grid">
-                <div>
-                    <img>
-                </div>
-
-                <div>
+            <div class="about-container bd-grid">                
+                <div class="about-img">
+                    <img src="img/IMG_1810.jpeg" alt="Yuko Bolak">
+                </div>                
+                
+                <div class="about-text">
+                    <h2 class="about-subtitle">I'm Yuko Bolak</h2>
                     <p>Frontend Developer</p>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -75,10 +81,11 @@
 
         <section id="skills" class="skills section">
             <h2 class="section-title">skills</h2>
+            
             <div class="skills-container bd-grid">
                 <div>
-                    <div>development</div>
-                    <ul>
+                    <div class="skills-subtitle">Development</div>
+                    <ul class="skills-list">
                         <li>HTML</li>
                         <li>CSS</li>
                         <li>JavaScript</li>
@@ -86,8 +93,8 @@
                     </ul>
                 </div>
                 <div>
-                    <div>design</div>
-                    <ul>
+                    <div class="skills-subtitle">Design</div>
+                    <ul class="skills-list">
                         <li>Figma</li>
                     </ul>
                 </div>
@@ -95,7 +102,7 @@
                 <!-- Insert Image -->
             </div>
         </section>
-
+        
         <section id="portfolio" class="portfolio section">
             <h2 class="section-title">portfolio</h2>
 
