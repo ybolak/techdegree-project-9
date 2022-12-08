@@ -28,18 +28,21 @@ h1 {
 
 /*===== About =====*/
 
-.about-text {
-    h2 {
-        font-family: $font-family-secondary;
-    }
+.about-intro {    
+    font-family: $font-family-secondary;
 }
 
 
 /*===== Skills =====*/
 
-.skills-subtitle {
-    font-family: $font-family-secondary;
+.skills-subtitle {    
     font-size: 1.25rem;
+}
+
+.skills-list {
+    li {
+        font-family: $font-family-secondary;
+    }
 }
 
 
@@ -47,4 +50,16 @@ h1 {
 
 .portfolio-link-name {
     color: $black;
+}
+
+
+/*===== Contact =====*/
+
+.contact-info {
+    transition: 0.3s;
+
+    a:hover {
+        color: red;
+        
+    }
 }
