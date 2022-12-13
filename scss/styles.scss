@@ -1,13 +1,62 @@
-@import 'utilities/index',
-        'base/index',
-        'components/index';
-
+@import "utilities/index", "base/index", "components/index";
 
 /* ============================================= */
 /*              Media Queries                    */
 /* ============================================= */
 
 @media (min-width: $med-break) {
-    
+  .portfolio-container {
+    grid-template-columns: 1fr 1fr;
+    padding-top: 80px;
+  }
 }
 
+@media (min-width: $lg-break) {
+  // nav bar
+  .hamburger-menu {
+    display: none;
+  }
+
+  .off-screen-container {
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+    backdrop-filter: none;
+  }
+
+  .off-screen-menu {
+    position: inherit;
+    display: flex;
+
+    li {
+      padding: 10px 40px;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .menu-link {
+    color: $font-color-primary;
+  }
+
+  .about,
+  .skills,
+  .portfolio {
+    min-height: 80vh;
+  }
+  .about-container,
+  .skills-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .footer-data {
+    padding: 0 30px;
+  }
+}

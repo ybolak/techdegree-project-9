@@ -1,0 +1,25 @@
+.bd-grid {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
+}
+
+.home-container.bd-grid {
+  // subtract header+padding
+  height: calc(100vh - 130px);
+}
+
+.home-title {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  row-gap: 30px;
+
+  p {
+    padding: 0 5px;
+  }
+}
+
+.home-scroll {
+  align-self: end;
+}

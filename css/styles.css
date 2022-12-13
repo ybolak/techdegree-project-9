@@ -363,15 +363,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.938rem;
-  font-weight: 500;
-  color: #fafaff;
-  line-height: 1.6;
-  background-color: #374D3E;
-}
-
 h1,
 h2,
 p {
@@ -387,16 +378,41 @@ ul {
 a {
   text-decoration: none;
   color: #fafaff;
+  cursor: pointer;
 }
 
-section {
+.section {
+  max-width: 1024px;
   min-height: 100vh;
-  padding-top: 82px;
+  padding-top: 110px;
+  margin: 0 auto;
 }
 
 .section-title {
   text-align: center;
+}
+.section-title span {
+  position: relative;
+  text-align: center;
   padding: 20px 0;
+}
+.section-title span::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0.2rem;
+  left: 0;
+  top: 0.5rem;
+  background-color: white;
+}
+.section-title span::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0.2rem;
+  left: 0;
+  top: 3.5rem;
+  background-color: white;
 }
 
 .about-container,
@@ -404,18 +420,22 @@ section {
 .portfolio-container,
 .contact-container,
 .footer-container {
-  padding: 30px 50px;
+  padding: 50px;
 }
 
 /*===== Home =====*/
-#home {
-  padding-top: 0;
+.home {
+  position: relative;
+  padding-top: 30px;
+  background: radial-gradient(circle at top left, #0f1637 30%, transparent), url(../img/asset1.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .home-scroll-link {
   writing-mode: vertical-lr;
   transform: rotate(-180deg);
-  padding: 10px 20px;
+  padding: 30px 20px;
 }
 
 /*===== About =====*/
@@ -460,8 +480,27 @@ section {
   vertical-align: middle;
 }
 
+/*===== Contact & Footer =====*/
+.contact,
+.footer {
+  min-height: auto;
+}
+
+.footer-social i {
+  font-size: 1.5rem;
+  padding: 0 10px;
+}
+
 * {
   font-family: "Montserrat", sans-serif;
+}
+
+body {
+  font-size: 0.938rem;
+  font-weight: 500;
+  color: #fafaff;
+  line-height: 1.6;
+  background-color: #0f1637;
 }
 
 h1 {
@@ -474,18 +513,24 @@ h1 {
 
 /*===== NAV =====*/
 .menu-link {
+  text-transform: lowercase;
   color: black;
   font-size: 0.938rem;
 }
 
 /*===== Home =====*/
-.home-title {
-  text-shadow: 20px 17px 15px black;
+.home-title h1 {
+  line-height: normal;
+  text-shadow: 23px 21px 25px #ffffc8;
+}
+.home-title p {
+  font-family: "Inconsolata", monospace;
+  font-size: 1.25rem;
 }
 
 /*===== About =====*/
 .about-intro {
-  font-family: "Cormorant", serif;
+  font-family: "Inconsolata", monospace;
 }
 
 /*===== Skills =====*/
@@ -494,7 +539,7 @@ h1 {
 }
 
 .skills-list li {
-  font-family: "Cormorant", serif;
+  font-family: "Inconsolata", monospace;
 }
 
 /*===== Portfolio =====*/
@@ -510,15 +555,53 @@ h1 {
   color: red;
 }
 
+/*===== Footer =====*/
+.footer-data h3 {
+  text-transform: lowercase;
+}
+.footer-data p,
+.footer-data li,
+.footer-data a {
+  color: #697477;
+}
+
+.bd-grid {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
+}
+
+.home-container.bd-grid {
+  height: calc(100vh - 130px);
+}
+
+.home-title {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  row-gap: 30px;
+}
+.home-title p {
+  padding: 0 5px;
+}
+
+.home-scroll {
+  align-self: end;
+}
+
 header {
   position: sticky;
   top: 0;
-  background-color: #374D3E;
+  height: 100px;
+  background-color: #0f1637;
   z-index: 1;
 }
 
 nav {
+  max-width: 1024px;
+  height: 100%;
   padding: 1rem;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -534,7 +617,7 @@ nav {
 
 .ham-bar {
   width: 70%;
-  height: 4px;
+  height: 2px;
   background-color: white;
   border-radius: 25px;
   position: absolute;
@@ -590,8 +673,28 @@ nav {
   padding: 10px 0;
 }
 
-.menu-link.active {
-  border-bottom: 2px solid white;
+.menu-link {
+  position: relative;
+  transition: all 0.5s;
+}
+.menu-link:after {
+  transition: all 0.5s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+.menu-link:hover {
+  color: #555;
+}
+.menu-link:hover:after {
+  width: 100%;
 }
 
 img {
@@ -602,7 +705,7 @@ img {
 }
 
 .about-img {
-  padding: 30px 0 50px;
+  padding: 30px 0;
 }
 .about-img img {
   width: 200px;
@@ -633,15 +736,77 @@ img {
   backdrop-filter: blur(8px);
   transition: 0.5s;
 }
-.portfolio-link a {
-  cursor: pointer;
-}
 .portfolio-link:hover {
   opacity: 1;
+}
+
+.logo-main {
+  height: 80px;
+  padding: 10px;
+}
+
+.cls-1 {
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
 }
 
 /* ============================================= */
 /*              Media Queries                    */
 /* ============================================= */
+@media (min-width: 768px) {
+  .portfolio-container {
+    grid-template-columns: 1fr 1fr;
+    padding-top: 80px;
+  }
+}
+@media (min-width: 1024px) {
+  .hamburger-menu {
+    display: none;
+  }
+
+  .off-screen-container {
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+    backdrop-filter: none;
+  }
+
+  .off-screen-menu {
+    position: inherit;
+    display: flex;
+  }
+  .off-screen-menu li {
+    padding: 10px 40px;
+  }
+  .off-screen-menu li:last-child {
+    padding-right: 0;
+  }
+
+  .menu-link {
+    color: #fafaff;
+  }
+
+  .about,
+.skills,
+.portfolio {
+    min-height: 80vh;
+  }
+
+  .about-container,
+.skills-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .footer-data {
+    padding: 0 30px;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
