@@ -39,7 +39,15 @@
   }
 
   .menu-link {
-    color: $font-color-primary;
+    color: $color-gray;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
   }
 
   .about,

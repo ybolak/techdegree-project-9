@@ -356,10 +356,11 @@ template {
 *,
 ::before,
 ::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 html {
+  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
@@ -379,13 +380,6 @@ a {
   text-decoration: none;
   color: #fafaff;
   cursor: pointer;
-}
-
-.section {
-  max-width: 1024px;
-  min-height: 100vh;
-  padding-top: 110px;
-  margin: 0 auto;
 }
 
 .section-title {
@@ -415,6 +409,17 @@ a {
   background-color: white;
 }
 
+.about,
+.skills,
+.portfolio,
+.contact,
+.footer {
+  max-width: 1024px;
+  min-height: 100vh;
+  padding-top: 110px;
+  margin: 0 auto;
+}
+
 .about-container,
 .skills-container,
 .portfolio-container,
@@ -425,11 +430,25 @@ a {
 
 /*===== Home =====*/
 .home {
+  min-height: 100vh;
   position: relative;
   padding-top: 30px;
-  background: radial-gradient(circle at top left, #0f1637 30%, transparent), url(../img/asset1.svg);
+  background: radial-gradient(circle at top left, #0f1637 30%, transparent), url(../img/background.svg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media (min-width: 1024px) {
+  .home {
+    background: none;
+  }
+}
+
+.desktop {
+  display: none;
+}
+
+.home-container {
+  max-width: 1024px;
 }
 
 .home-scroll-link {
@@ -448,18 +467,10 @@ a {
   padding: 20px 20px;
 }
 
-.about-social {
-  padding: 30px 0;
-}
-
-.about-social-icon i {
-  font-size: 1.5rem;
-  padding: 10px 10px;
-}
-
 /*===== Skills =====*/
 .skills-list {
   display: flex;
+  flex-wrap: wrap;
   padding: 30px 0;
 }
 .skills-list li {
@@ -520,12 +531,21 @@ h1 {
 
 /*===== Home =====*/
 .home-title h1 {
+  font-weight: 100;
   line-height: normal;
   text-shadow: 23px 21px 25px #ffffc8;
 }
 .home-title p {
   font-family: "Inconsolata", monospace;
   font-size: 1.25rem;
+}
+
+.home-scroll a {
+  color: #697477;
+  transition: all 0.3s;
+}
+.home-scroll a:hover {
+  color: #fafaff;
 }
 
 /*===== About =====*/
@@ -548,11 +568,12 @@ h1 {
 }
 
 /*===== Contact =====*/
-.contact-info {
+.contact-info a {
+  color: #697477;
   transition: 0.3s;
 }
 .contact-info a:hover {
-  color: red;
+  color: #fafaff;
 }
 
 /*===== Footer =====*/
@@ -572,7 +593,8 @@ h1 {
 }
 
 .home-container.bd-grid {
-  height: calc(100vh - 130px);
+  position: relative;
+  height: fit-content;
 }
 
 .home-title {
@@ -580,12 +602,17 @@ h1 {
   flex-direction: column;
   align-self: center;
   row-gap: 30px;
+  width: fit-content;
+  z-index: 1;
 }
 .home-title p {
   padding: 0 5px;
 }
 
 .home-scroll {
+  position: absolute;
+  bottom: -400px;
+  width: fit-content;
   align-self: end;
 }
 
@@ -594,7 +621,7 @@ header {
   top: 0;
   height: 100px;
   background-color: #0f1637;
-  z-index: 1;
+  z-index: 2;
 }
 
 nav {
@@ -687,11 +714,11 @@ nav {
   width: 0%;
   content: ".";
   color: transparent;
-  background: #aaa;
+  background: #fafaff;
   height: 1px;
 }
 .menu-link:hover {
-  color: #555;
+  color: #fafaff;
 }
 .menu-link:hover:after {
   width: 100%;
@@ -745,11 +772,26 @@ img {
   padding: 10px;
 }
 
-.cls-1 {
+.logo-path {
   fill: none;
   stroke: #fff;
   stroke-linecap: round;
   stroke-miterlimit: 10;
+}
+
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+polygon {
+  transition: all 1s ease-out;
+}
+polygon:hover {
+  fill: #ffffc8;
 }
 
 /* ============================================= */
@@ -786,7 +828,15 @@ img {
   }
 
   .menu-link {
-    color: #fafaff;
+    color: #697477;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
   }
 
   .about,

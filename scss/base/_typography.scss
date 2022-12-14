@@ -30,6 +30,7 @@ h1 {
 
 .home-title {
   h1 {
+    font-weight: 100;
     line-height: normal;
     text-shadow: 23px 21px 25px #ffffc8;
   }
@@ -37,6 +38,17 @@ h1 {
   p {
     font-family: $font-family-secondary;
     font-size: 1.25rem;
+  }
+}
+
+.home-scroll {
+  a {
+    color: $color-gray;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $font-color-primary;
+    }
   }
 }
 
@@ -67,10 +79,13 @@ h1 {
 /*===== Contact =====*/
 
 .contact-info {
-  transition: 0.3s;
+  a {
+    color: $color-gray;
+    transition: 0.3s;
 
-  a:hover {
-    color: red;
+    &:hover {
+      color: $font-color-primary;
+    }
   }
 }
 
