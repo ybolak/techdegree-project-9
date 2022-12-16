@@ -5,14 +5,58 @@
 /* ============================================= */
 
 @media (min-width: $med-break) {
+  .home-title {
+    h1 {
+      line-height: normal;
+    }
+  }
+
+  .home-scroll {
+    bottom: -600px;
+  }
+
   .portfolio-container {
-    grid-template-columns: 1fr 1fr;
+    // grid-template-columns: 1fr 1fr;
     padding-top: 80px;
   }
 }
 
 @media (min-width: $lg-break) {
+  // typography
+  //   body {
+  //     font-size: $font-size-desktop-normal;
+  //   }
+
+  h1 {
+    font-size: $font-size-desktop-xl;
+  }
+
+  .menu-link {
+    color: $font-color-secondary;
+  }
+
+  //   .home-title {
+  //     p {
+  //       font-size: $font-size-desktop-lg;
+  //     }
+  //   }
+
+  .skills-subtitle {
+    font-size: $font-size-desktop-lg;
+  }
+
+  //   .footer-social {
+  //     i {
+  //       font-size: $font-size-desktop-social;
+  //     }
+  //   }
+
   // nav bar
+
+  nav {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .hamburger-menu {
     display: none;
   }
@@ -38,16 +82,30 @@
     }
   }
 
-  .menu-link {
-    color: $color-gray;
-  }
-
+  // background-img
   .desktop {
     display: block;
   }
 
-  .mobile {
-    display: none;
+  //   image
+  .about-img {
+    img {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  .portfolio-img {
+    padding: 0;
+  }
+  .portfolio-link {
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .home-scroll {
+    bottom: -400px;
   }
 
   .about,
@@ -55,9 +113,20 @@
   .portfolio {
     min-height: 80vh;
   }
+
+  .portfolio-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 30px;
+  }
+
   .about-container,
   .skills-container {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .portfolio-container {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .footer-container {

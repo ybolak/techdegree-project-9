@@ -1,37 +1,19 @@
 /* ============================================= */
-/*              Descriptive colors               */
-/* ============================================= */
-
-$bunting: #0f1637;
-$titan-white: #fafaff;
-$pickled-bluewood: #2a3b47;
-$nevada: #697477;
-
-/* ============================================= */
 /*          　　　　　  Base Style colors  　             */
 /* ============================================= */
 
-$color-primary: $bunting;
+$color-primary: #0f1637;
 
-$color-gray: $nevada;
+$color-gray: #e0e1e5;
+$color-white: #fafaff;
+$color-black: black;
 
-$color-dark: $pickled-bluewood;
+$font-color-primary: #fafaff;
+$font-color-secondary: #697477;
 
-$color-white: $titan-white;
-
-$font-color-primary: $titan-white;
-$black: black;
-
-/* ============================================= */
-/*                 Base Styles                   */
-/* ============================================= */
-
-$margin-1: 0.5rem;
-$margin-2: 1rem;
-$margin-3: 1.5rem;
-$margin-4: 2rem;
-
-$z-fixed: 100;
+$polygon-hover-color-1: #d9ff00;
+$polygon-hover-color-2: #fd00ff;
+$polygon-hover-color-3: #00ffff;
 
 /* ============================================= */
 /*                 Typography                    */
@@ -42,11 +24,17 @@ $font-family-secondary: "Inconsolata", monospace;
 
 $font-wight-medium: 500;
 
-$font-size-big: 6.25rem;
-$font-size-normal: 0.938rem;
-$font-size-small: 0.813rem;
+$font-size-mobile-small: 0.9rem;
+$font-size-mobile-normal: 1rem;
+$font-size-mobile-lg: 1.25rem;
+$font-size-mobile-xl: 6.5rem;
+$font-size-mobile-social: 1.5rem;
 
-$font-size-h2: 1.25rem;
+$font-size-desktop-small: 1rem;
+$font-size-desktop-normal: 1.25rem;
+$font-size-desktop-lg: 1.6rem;
+$font-size-desktop-xl: 7.5rem;
+$font-size-desktop-social: 1.75rem;
 
 /* ============================================= */
 /*                Media Queries                  */
@@ -54,4 +42,4 @@ $font-size-h2: 1.25rem;
 
 $sm-break: 576px;
 $med-break: 768px;
-$lg-break: 1024px;
+$lg-break: 1200px;

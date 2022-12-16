@@ -38,6 +38,8 @@ img {
   background-color: rgba($color-white, 0.4);
   backdrop-filter: blur(8px);
   transition: 0.5s;
+  box-shadow: 0 0 20px $polygon-hover-color-1, 0 0 20px $polygon-hover-color-2,
+    0 0 20px $polygon-hover-color-3;
 
   &:hover {
     opacity: 1;

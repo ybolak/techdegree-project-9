@@ -7,7 +7,7 @@ header {
 }
 
 nav {
-  max-width: 1024px;
+  max-width: 1140px;
   height: 100%;
   padding: 1rem;
   margin: 0 auto;
@@ -86,10 +86,10 @@ nav {
 // hover effect credit to Mahesh Ambure (https://codepen.io/maheshambure21/pen/QwXaRw)
 .menu-link {
   position: relative;
-  transition: all 0.5s;
+  transition: all 0.3s;
 
   &:after {
-    transition: all 0.5s;
+    transition: all 0.3s;
     position: absolute;
     bottom: -5px;
     left: 0;
