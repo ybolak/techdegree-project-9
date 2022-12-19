@@ -73,8 +73,9 @@ a {
 .about-container,
 .skills-container,
 .portfolio-container,
-.contact-container {
-  padding: 50px;
+.contact-container,
+.footer-container {
+  padding: 50px 30px;
 }
 
 /*===== Home =====*/
@@ -90,7 +91,7 @@ a {
       rgba($color-primary, 1) 30%,
       transparent
     ),
-    url(../img/background.svg);
+    url(../svg/background.svg);
   background-repeat: no-repeat;
   background-size: cover;
   @media (min-width: $lg-break) {
@@ -145,18 +146,42 @@ a {
 
 /*===== Portfolio =====*/
 
-.portfolio-container {
-  padding: 30px 50px;
-}
+// .portfolio-container {
+//   padding: 50px 50px 30px;
+// }
 
 // center text
 .portfolio-link {
   display: table;
   text-align: center;
 
-  a {
-    display: table-cell;
-    vertical-align: middle;
+  // a {
+  //   display: table-cell;
+  //   vertical-align: middle;
+  // }
+}
+
+.portfolio-link-content {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px;
+
+  h3 {
+    margin: 10px 0;
+  }
+
+  p,
+  ul {
+    margin: 10px;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+
+    li {
+      margin: 0 10px;
+    }
   }
 }
 
@@ -171,11 +196,11 @@ a {
 .footer {
   min-height: auto;
   background: $color-gray;
+  scroll-snap-align: end;
 }
 
 .footer-container {
   max-width: 1140px;
-  padding: 50px;
   margin: 0 auto;
 }
 

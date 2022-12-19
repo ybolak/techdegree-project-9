@@ -74,7 +74,26 @@ a {
 
 /*===== Portfolio =====*/
 
+.portfolio-link-content {
+  color: $color-black;
+
+  h3,
+  p,
+  ul {
+    font-size: $font-size-mobile-small;
+    line-height: normal;
+  }
+
+  ul {
+    li {
+      font-family: $font-family-secondary;
+      color: $color-accent;
+    }
+  }
+}
+
 .portfolio-link-name {
+  font-family: $font-family-secondary;
   color: $color-black;
 }
 

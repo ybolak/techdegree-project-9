@@ -5,6 +5,27 @@
 /* ============================================= */
 
 @media (min-width: $med-break) {
+  .home {
+    min-height: calc(100vh - 100px);
+  }
+  .about,
+  .skills,
+  .portfolio {
+    min-height: auto;
+  }
+
+  .contact {
+    min-height: 50vh;
+  }
+
+  .about-container,
+  .skills-container,
+  .portfolio-container,
+  .contact-container,
+  .footer-container {
+    padding: 50px;
+  }
+
   .home-title {
     h1 {
       line-height: normal;
@@ -18,6 +39,29 @@
   .portfolio-container {
     // grid-template-columns: 1fr 1fr;
     padding-top: 80px;
+  }
+
+  .portfolio-link-content {
+    padding: 20px;
+
+    h3 {
+      font-size: $font-size-desktop-normal;
+      margin: 20px 0;
+    }
+
+    p,
+    ul {
+      font-size: $font-size-desktop-small;
+      line-height: inherit;
+      margin: 20px;
+    }
+  }
+
+  .portfolio-link-name {
+    svg {
+      width: 25px;
+      height: 25px;
+    }
   }
 }
 
@@ -90,8 +134,8 @@
   //   image
   .about-img {
     img {
-      width: 300px;
-      height: 300px;
+      width: 500px;
+      height: auto;
     }
   }
 
@@ -99,7 +143,7 @@
     padding: 0;
   }
   .portfolio-link {
-    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
   }

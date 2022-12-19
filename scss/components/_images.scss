@@ -6,12 +6,9 @@ img {
 }
 
 .about-img {
-  padding: 30px 0;
-
   img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+    width: 250px;
+    height: auto;
     margin: 0 auto;
   }
 }
@@ -22,21 +19,21 @@ img {
 
 .portfolio-img {
   position: relative;
-  padding: 0 30px 30px;
+  padding: 2px 0;
   z-index: 0;
 }
 
 // portfolio image overlay
 .portfolio-link {
   position: absolute;
-  top: 0;
-  left: 30px;
+  top: 20px;
+  left: 0;
   opacity: 0;
-  width: calc(100% - 60px);
-  height: calc(100% - 30px);
+  width: 100%;
+  height: calc(100% - 40px);
   border-radius: 8px;
-  background-color: rgba($color-white, 0.4);
-  backdrop-filter: blur(8px);
+  background-color: rgba($color-white, 1);
+  backdrop-filter: blur(10px);
   transition: 0.5s;
   box-shadow: 0 0 20px $polygon-hover-color-1, 0 0 20px $polygon-hover-color-2,
     0 0 20px $polygon-hover-color-3;

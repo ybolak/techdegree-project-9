@@ -410,8 +410,9 @@ a {
 .about-container,
 .skills-container,
 .portfolio-container,
-.contact-container {
-  padding: 50px;
+.contact-container,
+.footer-container {
+  padding: 50px 30px;
 }
 
 /*===== Home =====*/
@@ -421,7 +422,7 @@ a {
   padding-top: 30px;
   scroll-snap-align: start;
   scroll-margin: 110px;
-  background: radial-gradient(circle at top left, #0f1637 30%, transparent), url(../img/background.svg);
+  background: radial-gradient(circle at top left, #0f1637 30%, transparent), url(../svg/background.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -471,17 +472,29 @@ a {
 }
 
 /*===== Portfolio =====*/
-.portfolio-container {
-  padding: 30px 50px;
-}
-
 .portfolio-link {
   display: table;
   text-align: center;
 }
-.portfolio-link a {
+
+.portfolio-link-content {
   display: table-cell;
   vertical-align: middle;
+  padding: 10px;
+}
+.portfolio-link-content h3 {
+  margin: 10px 0;
+}
+.portfolio-link-content p,
+.portfolio-link-content ul {
+  margin: 10px;
+}
+.portfolio-link-content ul {
+  display: flex;
+  justify-content: center;
+}
+.portfolio-link-content ul li {
+  margin: 0 10px;
 }
 
 /*===== Contact =====*/
@@ -493,11 +506,11 @@ a {
 .footer {
   min-height: auto;
   background: #e0e1e5;
+  scroll-snap-align: end;
 }
 
 .footer-container {
   max-width: 1140px;
-  padding: 50px;
   margin: 0 auto;
 }
 
@@ -568,7 +581,22 @@ a {
 }
 
 /*===== Portfolio =====*/
+.portfolio-link-content {
+  color: black;
+}
+.portfolio-link-content h3,
+.portfolio-link-content p,
+.portfolio-link-content ul {
+  font-size: 0.9rem;
+  line-height: normal;
+}
+.portfolio-link-content ul li {
+  font-family: "Inconsolata", monospace;
+  color: #cb409e;
+}
+
 .portfolio-link-name {
+  font-family: "Inconsolata", monospace;
   color: black;
 }
 
@@ -741,13 +769,9 @@ img {
   border-radius: 8px;
 }
 
-.about-img {
-  padding: 30px 0;
-}
 .about-img img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  width: 250px;
+  height: auto;
   margin: 0 auto;
 }
 
@@ -757,20 +781,20 @@ img {
 
 .portfolio-img {
   position: relative;
-  padding: 0 30px 30px;
+  padding: 2px 0;
   z-index: 0;
 }
 
 .portfolio-link {
   position: absolute;
-  top: 0;
-  left: 30px;
+  top: 20px;
+  left: 0;
   opacity: 0;
-  width: calc(100% - 60px);
-  height: calc(100% - 30px);
+  width: 100%;
+  height: calc(100% - 40px);
   border-radius: 8px;
-  background-color: rgba(250, 250, 255, 0.4);
-  backdrop-filter: blur(8px);
+  background-color: #fafaff;
+  backdrop-filter: blur(10px);
   transition: 0.5s;
   box-shadow: 0 0 20px #d9ff00, 0 0 20px #fd00ff, 0 0 20px #00ffff;
 }
@@ -800,6 +824,17 @@ img {
 
 .skills-icon {
   fill: white;
+}
+
+.portfolio-link-name svg {
+  width: 15px;
+  height: 15px;
+  fill: black;
+  margin: 0 10px;
+  transition: all 0.2s;
+}
+.portfolio-link-name svg:hover {
+  fill: #cb409e;
 }
 
 polygon {
@@ -1085,6 +1120,28 @@ polygon:hover {
 /*              Media Queries                    */
 /* ============================================= */
 @media (min-width: 768px) {
+  .home {
+    min-height: calc(100vh - 100px);
+  }
+
+  .about,
+.skills,
+.portfolio {
+    min-height: auto;
+  }
+
+  .contact {
+    min-height: 50vh;
+  }
+
+  .about-container,
+.skills-container,
+.portfolio-container,
+.contact-container,
+.footer-container {
+    padding: 50px;
+  }
+
   .home-title h1 {
     line-height: normal;
   }
@@ -1095,6 +1152,25 @@ polygon:hover {
 
   .portfolio-container {
     padding-top: 80px;
+  }
+
+  .portfolio-link-content {
+    padding: 20px;
+  }
+  .portfolio-link-content h3 {
+    font-size: 1.25rem;
+    margin: 20px 0;
+  }
+  .portfolio-link-content p,
+.portfolio-link-content ul {
+    font-size: 1rem;
+    line-height: inherit;
+    margin: 20px;
+  }
+
+  .portfolio-link-name svg {
+    width: 25px;
+    height: 25px;
   }
 }
 @media (min-width: 1200px) {
@@ -1143,8 +1219,8 @@ polygon:hover {
   }
 
   .about-img img {
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: auto;
   }
 
   .portfolio-img {
@@ -1152,7 +1228,7 @@ polygon:hover {
   }
 
   .portfolio-link {
-    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
   }

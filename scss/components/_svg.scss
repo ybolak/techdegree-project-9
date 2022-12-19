@@ -22,6 +22,20 @@
   fill: white;
 }
 
+.portfolio-link-name {
+  svg {
+    width: 15px;
+    height: 15px;
+    fill: $color-black;
+    margin: 0 10px;
+    transition: all 0.2s;
+
+    &:hover {
+      fill: $color-accent;
+    }
+  }
+}
+
 polygon {
   transition: all 2s ease-in;
 
