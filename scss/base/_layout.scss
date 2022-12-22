@@ -9,19 +9,6 @@
   height: fit-content;
 }
 
-.home-title {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  row-gap: 30px;
-  width: fit-content;
-  z-index: 1;
-
-  p {
-    padding: 0 5px;
-  }
-}
-
 .home-scroll {
   position: absolute;
   bottom: -220px;

@@ -19,19 +19,24 @@
 }
 
 .skills-icon {
-  fill: white;
+  width: 45px;
+  height: 45px;
+}
+
+.skills-icon-path {
+  fill: $color-accent-2;
 }
 
 .portfolio-link-name {
   svg {
     width: 15px;
     height: 15px;
-    fill: $color-black;
+    fill: $color-white;
     margin: 0 10px;
     transition: all 0.2s;
 
     &:hover {
-      fill: $color-accent;
+      fill: $color-accent-1;
     }
   }
 }

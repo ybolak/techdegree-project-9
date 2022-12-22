@@ -5,6 +5,10 @@
 /* ============================================= */
 /*                 Typography                    */
 /* ============================================= */
+@font-face {
+  font-family: "Majoram";
+  src: url(../font/Majoram.otf) format("opentype");
+}
 /* ============================================= */
 /*                Media Queries                  */
 /* ============================================= */
@@ -356,7 +360,6 @@ template {
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
 }
 
 h1,
@@ -383,17 +386,6 @@ a {
   text-align: center;
   padding: 20px 0;
 }
-.section-title span::after {
-  position: absolute;
-  content: "";
-  width: 0.5rem;
-  height: 0.5rem;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  background-color: white;
-  border-radius: 50%;
-}
 
 .about,
 .skills,
@@ -403,25 +395,24 @@ a {
   min-height: 100vh;
   padding-top: 110px;
   margin: 0 auto;
-  scroll-snap-align: start;
-  scroll-margin: 20px;
 }
 
 .about-container,
 .skills-container,
 .portfolio-container,
-.contact-container,
+.contact-container {
+  padding: 50px 20px;
+}
+
 .footer-container {
-  padding: 50px 30px;
+  padding: 50px 16px;
 }
 
 /*===== Home =====*/
 .home {
-  min-height: 100vh;
+  min-height: calc(100vh - 100px);
   position: relative;
   padding-top: 30px;
-  scroll-snap-align: start;
-  scroll-margin: 110px;
   background: radial-gradient(circle at top left, #0f1637 30%, transparent), url(../svg/background.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -440,6 +431,12 @@ a {
   max-width: 1140px;
 }
 
+.home-title {
+  width: fit-content;
+  padding: 0 20px;
+  z-index: 1;
+}
+
 .home-scroll-link {
   writing-mode: vertical-lr;
   transform: rotate(-180deg);
@@ -456,19 +453,21 @@ a {
   text-align: center;
 }
 
+.about-subtitle {
+  margin-top: 20px;
+}
+
 .about-text h2,
 .about-text p {
-  padding: 20px 20px;
+  padding: 10px 20px;
 }
 
 /*===== Skills =====*/
 .skills-list {
   display: flex;
   flex-wrap: wrap;
-  padding: 30px 0;
-}
-.skills-list li {
-  padding: 0 30px;
+  justify-content: center;
+  padding: 20px 0;
 }
 
 /*===== Portfolio =====*/
@@ -480,14 +479,14 @@ a {
 .portfolio-link-content {
   display: table-cell;
   vertical-align: middle;
-  padding: 10px;
+  padding: 10px 20px;
 }
 .portfolio-link-content h3 {
   margin: 10px 0;
 }
 .portfolio-link-content p,
 .portfolio-link-content ul {
-  margin: 10px;
+  margin: 10px 0;
 }
 .portfolio-link-content ul {
   display: flex;
@@ -502,11 +501,35 @@ a {
   min-height: 70vh;
 }
 
+.contact-container {
+  text-align: center;
+}
+
+.contact-info {
+  padding: 0 20px;
+}
+.contact-info h2,
+.contact-info p {
+  margin: 20px 0;
+}
+.contact-info a {
+  display: inline-block;
+  width: fit-content;
+  transition: 0.3s;
+  padding: 12px;
+  border: 2px solid #cb409e;
+  border-radius: 8px;
+  margin: 30px auto;
+}
+.contact-info a:hover {
+  background-color: rgba(203, 64, 158, 0.2);
+  box-shadow: 0 0 10px #d9ff00, 0 0 20px #fd00ff;
+}
+
 /*===== Footer =====*/
 .footer {
   min-height: auto;
   background: #e0e1e5;
-  scroll-snap-align: end;
 }
 
 .footer-container {
@@ -514,8 +537,24 @@ a {
   margin: 0 auto;
 }
 
+.footer-nav {
+  transition: all 0.3s;
+}
+.footer-nav:hover {
+  color: #cb409e;
+}
+
+.footer-social {
+  transition: all 0.3s;
+}
+.footer-social:hover {
+  color: #cb409e;
+}
 .footer-social i {
   padding: 0 10px;
+}
+.footer-social i:first-child {
+  padding-left: 0;
 }
 
 * {
@@ -524,14 +563,17 @@ a {
 
 body {
   font-size: 1rem;
-  font-weight: 500;
   color: #fafaff;
   line-height: 1.6;
   background-color: #0f1637;
 }
 
 h1 {
-  font-size: 6.5rem;
+  font-size: 5.5rem;
+}
+
+h2 {
+  font-size: 2rem;
 }
 
 a {
@@ -542,47 +584,33 @@ a {
 .section-title {
   text-transform: uppercase;
 }
+.section-title span {
+  font-family: "Majoram", sans-serif;
+}
 
 /*===== NAV =====*/
 .menu-link {
-  font-family: "Inconsolata", monospace;
   text-transform: lowercase;
   color: black;
 }
 
 /*===== Home =====*/
-.home-title h1 {
+.home-title h1,
+.home-title span {
+  font-family: "Majoram", sans-serif;
   color: #0f1637;
   font-weight: 700;
   line-height: 7rem;
   text-shadow: 0 0 20px white, 0 0 20px white, 0 0 40px white, 0 0 10px #ffffc8;
 }
-.home-title p {
-  font-family: "Inconsolata", monospace;
-  font-size: 1.25rem;
-}
 
 .home-scroll a {
-  color: #697477;
-}
-
-/*===== About =====*/
-.about-intro {
-  font-family: "Inconsolata", monospace;
-}
-
-/*===== Skills =====*/
-.skills-subtitle {
-  font-size: 1.25rem;
-}
-
-.skills-list li {
-  font-family: "Inconsolata", monospace;
+  color: #9fa8aa;
 }
 
 /*===== Portfolio =====*/
 .portfolio-link-content {
-  color: black;
+  color: #fafaff;
 }
 .portfolio-link-content h3,
 .portfolio-link-content p,
@@ -591,22 +619,12 @@ a {
   line-height: normal;
 }
 .portfolio-link-content ul li {
-  font-family: "Inconsolata", monospace;
   color: #cb409e;
-}
-
-.portfolio-link-name {
-  font-family: "Inconsolata", monospace;
-  color: black;
 }
 
 /*===== Contact =====*/
 .contact-info a {
-  color: #697477;
-  transition: 0.3s;
-}
-.contact-info a:hover {
-  color: #fafaff;
+  color: #cb409e;
 }
 
 /*===== Footer =====*/
@@ -617,7 +635,7 @@ a {
 .footer-data p,
 .footer-data li,
 .footer-data a {
-  color: #697477;
+  color: black;
 }
 
 .footer-social i {
@@ -633,18 +651,6 @@ a {
 .home-container.bd-grid {
   position: relative;
   height: fit-content;
-}
-
-.home-title {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  row-gap: 30px;
-  width: fit-content;
-  z-index: 1;
-}
-.home-title p {
-  padding: 0 5px;
 }
 
 .home-scroll {
@@ -780,26 +786,20 @@ img {
 }
 
 .portfolio-img {
-  position: relative;
-  padding: 2px 0;
-  z-index: 0;
-}
-
-.portfolio-link {
-  position: absolute;
-  top: 20px;
-  left: 0;
-  opacity: 0;
-  width: 100%;
-  height: calc(100% - 40px);
+  background: #1f2644;
+  padding: 15px 0;
+  margin: 15px 0;
   border-radius: 8px;
-  background-color: #fafaff;
-  backdrop-filter: blur(10px);
-  transition: 0.5s;
-  box-shadow: 0 0 20px #d9ff00, 0 0 20px #fd00ff, 0 0 20px #00ffff;
 }
-.portfolio-link:hover {
-  opacity: 1;
+.portfolio-img:first-child {
+  margin-top: 0;
+}
+.portfolio-img img {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  margin: 20px auto;
 }
 
 .logo-main {
@@ -823,13 +823,18 @@ img {
 }
 
 .skills-icon {
-  fill: white;
+  width: 45px;
+  height: 45px;
+}
+
+.skills-icon-path {
+  fill: #fffec3;
 }
 
 .portfolio-link-name svg {
   width: 15px;
   height: 15px;
-  fill: black;
+  fill: #fafaff;
   margin: 0 10px;
   transition: all 0.2s;
 }
@@ -1120,8 +1125,12 @@ polygon:hover {
 /*              Media Queries                    */
 /* ============================================= */
 @media (min-width: 768px) {
+  h1 {
+    font-size: 7.5rem;
+  }
+
   .home {
-    min-height: calc(100vh - 100px);
+    overflow: hidden;
   }
 
   .about,
@@ -1131,30 +1140,76 @@ polygon:hover {
   }
 
   .contact {
-    min-height: 50vh;
+    min-height: 60vh;
   }
 
   .about-container,
 .skills-container,
 .portfolio-container,
-.contact-container,
-.footer-container {
+.contact-container {
     padding: 50px;
   }
 
+  .home-title {
+    padding: 100px 30px 0;
+  }
   .home-title h1 {
     line-height: normal;
   }
+  .home-title p {
+    font-size: 1.25rem;
+  }
 
   .home-scroll {
-    bottom: -600px;
+    bottom: -450px;
+  }
+
+  .about-img img {
+    width: 500px;
+    height: auto;
+  }
+
+  .about-text h2,
+.about-text p {
+    padding: 20px 30px;
   }
 
   .portfolio-container {
     padding-top: 80px;
   }
 
+  .portfolio-img {
+    position: relative;
+    padding: 20px 30px;
+    border-radius: 0;
+    margin: 0;
+    background: none;
+    z-index: 0;
+  }
+  .portfolio-img img {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .portfolio-link {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: calc(100% - 40px);
+    border-radius: 8px;
+    background-color: #fafaff;
+    backdrop-filter: blur(10px);
+    transition: 0.5s;
+    box-shadow: 0 0 20px #d9ff00, 0 0 20px #fd00ff, 0 0 20px #00ffff;
+  }
+  .portfolio-link:hover {
+    opacity: 1;
+  }
+
   .portfolio-link-content {
+    color: black;
     padding: 20px;
   }
   .portfolio-link-content h3 {
@@ -1171,15 +1226,39 @@ polygon:hover {
   .portfolio-link-name svg {
     width: 25px;
     height: 25px;
+    fill: black;
+  }
+
+  .contact-info {
+    padding: 0 30px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 50px;
+    padding: 50px 16px;
   }
 }
 @media (min-width: 1200px) {
-  h1 {
-    font-size: 7.5rem;
+  html {
+    scroll-snap-type: y mandatory;
+  }
+
+  .about,
+.skills,
+.portfolio,
+.contact {
+    scroll-snap-align: start;
+    scroll-margin: 20px;
+  }
+
+  .home {
+    scroll-snap-align: start;
+    scroll-margin: 110px;
   }
 
   .menu-link {
-    color: #697477;
+    color: #9fa8aa;
   }
 
   .skills-subtitle {
@@ -1218,11 +1297,6 @@ polygon:hover {
     display: block;
   }
 
-  .about-img img {
-    width: 500px;
-    height: auto;
-  }
-
   .portfolio-img {
     padding: 0;
   }
@@ -1234,13 +1308,25 @@ polygon:hover {
   }
 
   .home-scroll {
-    bottom: -400px;
+    bottom: -250px;
   }
 
   .about,
 .skills,
 .portfolio {
     min-height: 80vh;
+  }
+
+  .about-container.bd-grid {
+    grid-template-rows: 1fr auto;
+  }
+
+  .about-img {
+    grid-row: 1/3;
+  }
+
+  .about-text {
+    align-self: center;
   }
 
   .portfolio-container {
@@ -1256,14 +1342,6 @@ polygon:hover {
   .portfolio-container {
     padding-left: 0;
     padding-right: 0;
-  }
-
-  .footer-container {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .footer-data {
-    padding: 0 30px;
   }
 }
 

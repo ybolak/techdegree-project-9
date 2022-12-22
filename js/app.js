@@ -16,11 +16,6 @@ function toggleOffScreenMenu(element) {
 toggleOffScreenMenu(hamMenu);
 toggleOffScreenMenu(offScreenMenu);
 
-// hamMenu.addEventListener('click', () => {
-//     hamMenu.classList.toggle('active');
-//     offScreenMenu.classList.toggle('active');
-// });
-
 menuLink.addEventListener("click", () => {
   menuLink.classList.toggle("active");
 });

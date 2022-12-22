@@ -4,13 +4,16 @@
 
 body {
   font-size: $font-size-mobile-normal;
-  font-weight: $font-wight-medium;
   color: $font-color-primary;
   line-height: 1.6;
   background-color: $color-primary;
 }
 
 h1 {
+  font-size: $font-size-mobile-xxl;
+}
+
+h2 {
   font-size: $font-size-mobile-xl;
 }
 
@@ -21,12 +24,15 @@ a {
 
 .section-title {
   text-transform: uppercase;
+
+  span {
+    font-family: $font-family-title;
+  }
 }
 
 /*===== NAV =====*/
 
 .menu-link {
-  font-family: $font-family-secondary;
   text-transform: lowercase;
   color: $color-black;
 }
@@ -34,17 +40,14 @@ a {
 /*===== Home =====*/
 
 .home-title {
-  h1 {
+  h1,
+  span {
+    font-family: $font-family-title;
     color: $color-primary;
     font-weight: 700;
     line-height: 7rem;
     text-shadow: 0 0 20px white, 0 0 20px white, 0 0 40px white,
       0 0 10px #ffffc8;
-  }
-
-  p {
-    font-family: $font-family-secondary;
-    font-size: $font-size-mobile-lg;
   }
 }
 
@@ -54,28 +57,10 @@ a {
   }
 }
 
-/*===== About =====*/
-
-.about-intro {
-  font-family: $font-family-secondary;
-}
-
-/*===== Skills =====*/
-
-.skills-subtitle {
-  font-size: $font-size-mobile-lg;
-}
-
-.skills-list {
-  li {
-    font-family: $font-family-secondary;
-  }
-}
-
 /*===== Portfolio =====*/
 
 .portfolio-link-content {
-  color: $color-black;
+  color: $color-white;
 
   h3,
   p,
@@ -86,27 +71,16 @@ a {
 
   ul {
     li {
-      font-family: $font-family-secondary;
-      color: $color-accent;
+      color: $color-accent-1;
     }
   }
-}
-
-.portfolio-link-name {
-  font-family: $font-family-secondary;
-  color: $color-black;
 }
 
 /*===== Contact =====*/
 
 .contact-info {
   a {
-    color: $font-color-secondary;
-    transition: 0.3s;
-
-    &:hover {
-      color: $font-color-primary;
-    }
+    color: $color-accent-1;
   }
 }
 
@@ -120,7 +94,7 @@ a {
   p,
   li,
   a {
-    color: $font-color-secondary;
+    color: $color-black;
   }
 }
 

@@ -3,14 +3,15 @@
 /* ============================================= */
 
 $color-primary: #0f1637;
-$color-accent: #cb409e;
+$color-accent-1: #cb409e;
+$color-accent-2: #fffec3;
 
 $color-gray: #e0e1e5;
 $color-white: #fafaff;
 $color-black: black;
 
 $font-color-primary: #fafaff;
-$font-color-secondary: #697477;
+$font-color-secondary: #9fa8aa;
 
 $polygon-hover-color-1: #d9ff00;
 $polygon-hover-color-2: #fd00ff;
@@ -20,15 +21,20 @@ $polygon-hover-color-3: #00ffff;
 /*                 Typography                    */
 /* ============================================= */
 
-$font-family-primary: "Montserrat", sans-serif;
-$font-family-secondary: "Inconsolata", monospace;
+@font-face {
+  font-family: "Majoram";
+  src: url(../font/Majoram.otf) format("opentype");
+}
 
-$font-wight-medium: 500;
+$font-family-title: "Majoram", sans-serif;
+$font-family-primary: "Montserrat", sans-serif;
+// $font-family-secondary: "Inconsolata", monospace;
 
 $font-size-mobile-small: 0.9rem;
 $font-size-mobile-normal: 1rem;
 $font-size-mobile-lg: 1.25rem;
-$font-size-mobile-xl: 6.5rem;
+$font-size-mobile-xl: 2rem;
+$font-size-mobile-xxl: 5.5rem;
 $font-size-mobile-social: 1.5rem;
 
 $font-size-desktop-small: 1rem;
