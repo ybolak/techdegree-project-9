@@ -69,9 +69,6 @@ a {
     url(../svg/background.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  @media (min-width: $lg-break) {
-    background: none;
-  }
 }
 
 .desktop {
@@ -161,7 +158,7 @@ a {
 /*===== Contact =====*/
 
 .contact {
-  min-height: 70vh;
+  min-height: 80vh;
 }
 
 .contact-container {

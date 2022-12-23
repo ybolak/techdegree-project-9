@@ -16,19 +16,15 @@
   .home {
     overflow: hidden;
   }
-
   .about,
-  .skills,
   .portfolio {
     min-height: auto;
   }
-
   .contact {
     min-height: 60vh;
   }
 
   .about-container,
-  .skills-container,
   .portfolio-container,
   .contact-container {
     padding: 50px;
@@ -161,6 +157,7 @@
   .home {
     scroll-snap-align: start;
     scroll-margin: 110px;
+    background: none;
   }
 
   // typography
@@ -179,7 +176,6 @@
   .hamburger-menu {
     display: none;
   }
-
   .off-screen-container {
     position: static;
     width: auto;
@@ -187,7 +183,6 @@
     background: none;
     backdrop-filter: none;
   }
-
   .off-screen-menu {
     position: inherit;
     display: flex;
@@ -201,11 +196,34 @@
     }
   }
 
-  // background-img
   .desktop {
     display: block;
   }
+  .home-scroll {
+    bottom: -250px;
+  }
 
+  .about,
+  .portfolio {
+    min-height: 80vh;
+  }
+  .about-container.bd-grid {
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-img {
+    grid-row: 1/3;
+  }
+  .about-text {
+    align-self: center;
+  }
+
+  .portfolio-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 30px;
+    padding-left: 0;
+    padding-right: 0;
+  }
   .portfolio-img {
     padding: 0;
   }
@@ -214,41 +232,5 @@
     left: 0;
     width: 100%;
     height: 100%;
-  }
-
-  .home-scroll {
-    bottom: -250px;
-  }
-
-  .about,
-  .skills,
-  .portfolio {
-    min-height: 80vh;
-  }
-
-  .about-container.bd-grid {
-    grid-template-rows: 1fr auto;
-  }
-  .about-img {
-    grid-row: 1/3;
-  }
-
-  .about-text {
-    align-self: center;
-  }
-
-  .portfolio-container {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px 30px;
-  }
-
-  .about-container,
-  .skills-container {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .portfolio-container {
-    padding-left: 0;
-    padding-right: 0;
   }
 }

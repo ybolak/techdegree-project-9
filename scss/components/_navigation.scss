@@ -110,3 +110,11 @@ nav {
     }
   }
 }
+
+.menu-link.active {
+  color: $font-color-primary;
+
+  &:after {
+    width: 100%;
+  }
+}

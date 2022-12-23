@@ -18,15 +18,6 @@
   height: 100vh;
 }
 
-.skills-icon {
-  width: 45px;
-  height: 45px;
-}
-
-.skills-icon-path {
-  fill: $color-accent-2;
-}
-
 .portfolio-link-name {
   svg {
     width: 15px;
@@ -41,6 +32,13 @@
   }
 }
 
+.logo-footer {
+  width: 70px;
+  height: auto;
+  margin: 20px 0 15px;
+}
+
+// Home section background
 polygon {
   transition: all 2s ease-in;
 
@@ -60,8 +58,10 @@ polygon:hover {
 .cls-2 {
   fill: #f0f1f3;
 
-  &::hover {
-    filter: drop-shadow(0 0 40px $polygon-hover-color-1);
+  &:hover {
+    filter: drop-shadow(0 0 40px $polygon-hover-color-1)
+      drop-shadow(0 0 40px $polygon-hover-color-2)
+      drop-shadow(0 0 40px $polygon-hover-color-3);
   }
 }
 
@@ -69,8 +69,10 @@ polygon:hover {
 .cls-4 {
   fill: #808395;
 
-  &::hover {
-    filter: drop-shadow(0 0 40px $polygon-hover-color-1);
+  &:hover {
+    filter: drop-shadow(0 0 40px $polygon-hover-color-1)
+      drop-shadow(0 0 40px $polygon-hover-color-2)
+      drop-shadow(0 0 40px $polygon-hover-color-3);
   }
 }
 
@@ -78,8 +80,10 @@ polygon:hover {
 .cls-6 {
   fill: #a0a2b0;
 
-  &::hover {
-    filter: drop-shadow(0 0 40px $polygon-hover-color-1);
+  &:hover {
+    filter: drop-shadow(0 0 40px $polygon-hover-color-1)
+      drop-shadow(0 0 40px $polygon-hover-color-2)
+      drop-shadow(0 0 40px $polygon-hover-color-3);
   }
 }
 
@@ -87,8 +91,10 @@ polygon:hover {
 .cls-8 {
   fill: #c0c2ca;
 
-  &::hover {
-    filter: drop-shadow(0 0 40px $polygon-hover-color-1);
+  &:hover {
+    filter: drop-shadow(0 0 40px $polygon-hover-color-1)
+      drop-shadow(0 0 40px $polygon-hover-color-2)
+      drop-shadow(0 0 40px $polygon-hover-color-3);
   }
 }
 
@@ -96,8 +102,10 @@ polygon:hover {
 .cls-10 {
   fill: #d0d1d8;
 
-  &::hover {
-    filter: drop-shadow(0 0 40px $polygon-hover-color-1);
+  &:hover {
+    filter: drop-shadow(0 0 40px $polygon-hover-color-1)
+      drop-shadow(0 0 40px $polygon-hover-color-2)
+      drop-shadow(0 0 40px $polygon-hover-color-3);
   }
 }
 
@@ -108,8 +116,10 @@ polygon:hover {
 .cls-15 {
   fill: #111838;
 
-  &::hover {
-    filter: drop-shadow(0 0 40px $polygon-hover-color-1);
+  &:hover {
+    filter: drop-shadow(0 0 40px $polygon-hover-color-1)
+      drop-shadow(0 0 40px $polygon-hover-color-2)
+      drop-shadow(0 0 40px $polygon-hover-color-3);
   }
 }
 
@@ -122,8 +132,10 @@ polygon:hover {
 .cls-22 {
   fill: #1f2644;
 
-  &::hover {
-    filter: drop-shadow(0 0 40px $polygon-hover-color-1);
+  &:hover {
+    filter: drop-shadow(0 0 40px $polygon-hover-color-1)
+      drop-shadow(0 0 40px $polygon-hover-color-2)
+      drop-shadow(0 0 40px $polygon-hover-color-3);
   }
 }
 
@@ -133,18 +145,25 @@ polygon:hover {
 .cls-26 {
   fill: #131a3a;
 
-  &::hover {
-    filter: drop-shadow(0 0 40px $polygon-hover-color-1);
+  &:hover {
+    filter: drop-shadow(0 0 40px $polygon-hover-color-1)
+      drop-shadow(0 0 40px $polygon-hover-color-2)
+      drop-shadow(0 0 40px $polygon-hover-color-3);
   }
 }
 
-.cls-27,
+.cls-27 {
+  fill: #0f1637;
+}
+
 .cls-28,
 .cls-29 {
   fill: #0f1637;
 
-  &::hover {
-    filter: drop-shadow(0 0 40px $polygon-hover-color-1);
+  &:hover {
+    filter: drop-shadow(0 0 40px $polygon-hover-color-1)
+      drop-shadow(0 0 40px $polygon-hover-color-2)
+      drop-shadow(0 0 40px $polygon-hover-color-3);
   }
 }
 
@@ -155,8 +174,10 @@ polygon:hover {
 .cls-34 {
   fill: #3f455f;
 
-  &::hover {
-    filter: drop-shadow(0 0 40px $polygon-hover-color-1);
+  &:hover {
+    filter: drop-shadow(0 0 40px $polygon-hover-color-1)
+      drop-shadow(0 0 40px $polygon-hover-color-2)
+      drop-shadow(0 0 40px $polygon-hover-color-3);
   }
 }
 
@@ -165,16 +186,20 @@ polygon:hover {
 .cls-37 {
   fill: #2f3552;
 
-  &::hover {
-    filter: drop-shadow(0 0 40px $polygon-hover-color-1);
+  &:hover {
+    filter: drop-shadow(0 0 40px $polygon-hover-color-1)
+      drop-shadow(0 0 40px $polygon-hover-color-2)
+      drop-shadow(0 0 40px $polygon-hover-color-3);
   }
 }
 
 .cls-38 {
   fill: #272d4b;
 
-  &::hover {
-    filter: drop-shadow(0 0 40px $polygon-hover-color-1);
+  &:hover {
+    filter: drop-shadow(0 0 40px $polygon-hover-color-1)
+      drop-shadow(0 0 40px $polygon-hover-color-2)
+      drop-shadow(0 0 40px $polygon-hover-color-3);
   }
 }
 
@@ -183,8 +208,10 @@ polygon:hover {
 .cls-41 {
   fill: #4f546d;
 
-  &::hover {
-    filter: drop-shadow(0 0 40px $polygon-hover-color-1);
+  &:hover {
+    filter: drop-shadow(0 0 40px $polygon-hover-color-1)
+      drop-shadow(0 0 40px $polygon-hover-color-2)
+      drop-shadow(0 0 40px $polygon-hover-color-3);
   }
 }
 
@@ -192,18 +219,10 @@ polygon:hover {
 .cls-12,
 .cls-28 {
   stroke: #111838;
-
-  // &::hover {
-  //   filter: drop-shadow(0 0 40px $polygon-hover-color);
-  // }
 }
 
 .cls-17 {
   stroke: #4f546d;
-
-  // &::hover {
-  //   filter: drop-shadow(0 0 40px $polygon-hover-color);
-  // }
 }
 
 .cls-18,
@@ -214,18 +233,10 @@ polygon:hover {
 .cls-15,
 .cls-40 {
   stroke: #5f647a;
-
-  // &::hover {
-  //   filter: drop-shadow(0 0 40px $polygon-hover-color);
-  // }
 }
 
 .cls-19 {
   stroke: #2f3552;
-
-  // &::hover {
-  //   filter: drop-shadow(0 0 40px $polygon-hover-color);
-  // }
 }
 
 .cls-10,
@@ -256,10 +267,6 @@ polygon:hover {
 .cls-37,
 .cls-46 {
   stroke-width: 0.5px;
-
-  // &::hover {
-  //   filter: drop-shadow(0 0 40px $polygon-hover-color);
-  // }
 }
 
 .cls-10,
@@ -278,51 +285,45 @@ polygon:hover {
 .cls-41,
 .cls-36 {
   stroke: #b0b2bd;
-
-  // &::hover {
-  //   filter: drop-shadow(0 0 40px $polygon-hover-color);
-  // }
 }
 
 .cls-42 {
   fill: #b0b2bd;
 
-  &::hover {
-    filter: drop-shadow(0 0 40px $polygon-hover-color-1);
+  &:hover {
+    filter: drop-shadow(0 0 40px $polygon-hover-color-1)
+      drop-shadow(0 0 40px $polygon-hover-color-2)
+      drop-shadow(0 0 40px $polygon-hover-color-3);
   }
 }
 
 .cls-43 {
   fill: #9093a2;
 
-  &::hover {
-    filter: drop-shadow(0 0 40px $polygon-hover-color-1);
+  &:hover {
+    filter: drop-shadow(0 0 40px $polygon-hover-color-1)
+      drop-shadow(0 0 40px $polygon-hover-color-2)
+      drop-shadow(0 0 40px $polygon-hover-color-3);
   }
 }
 
 .cls-13,
 .cls-34 {
   stroke: #3f455f;
-
-  // &::hover {
-  //   filter: drop-shadow(0 0 40px $polygon-hover-color);
-  // }
 }
 
 .cls-20,
 .cls-33 {
   stroke: #9093a2;
-
-  // &::hover {
-  //   filter: drop-shadow(0 0 40px $polygon-hover-color);
-  // }
 }
 
 .cls-44 {
   fill: #e0e1e5;
 
-  &::hover {
-    filter: drop-shadow(0 0 40px $polygon-hover-color-1);
+  &:hover {
+    filter: drop-shadow(0 0 40px $polygon-hover-color-1)
+      drop-shadow(0 0 40px $polygon-hover-color-2)
+      drop-shadow(0 0 40px $polygon-hover-color-3);
   }
 }
 
@@ -330,23 +331,17 @@ polygon:hover {
 .cls-46 {
   fill: #5f647a;
 
-  &::hover {
-    filter: drop-shadow(0 0 40px $polygon-hover-color-1);
+  &:hover {
+    filter: drop-shadow(0 0 40px $polygon-hover-color-1)
+      drop-shadow(0 0 40px $polygon-hover-color-2)
+      drop-shadow(0 0 40px $polygon-hover-color-3);
   }
 }
 
 .cls-37 {
   stroke: #c0c2ca;
-
-  // &::hover {
-  //   filter: drop-shadow(0 0 40px $polygon-hover-color);
-  // }
 }
 
 .cls-46 {
   stroke: #808395;
-
-  // &::hover {
-  //   filter: drop-shadow(0 0 40px $polygon-hover-color);
-  // }
 }
