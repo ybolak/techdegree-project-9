@@ -382,7 +382,6 @@ a {
   text-align: center;
 }
 .section-title span {
-  position: relative;
   text-align: center;
   padding: 20px 0;
 }
@@ -608,6 +607,11 @@ a {
   color: #9fa8aa;
 }
 
+/*===== About =====*/
+.about-subtitle {
+  font-size: 1.25rem;
+}
+
 /*===== Portfolio =====*/
 .portfolio-link-content {
   color: #fafaff;
@@ -808,7 +812,7 @@ img {
 }
 
 .logo-path {
-  fill: none;
+  fill: #fff;
   stroke: #fff;
   stroke-linecap: round;
   stroke-miterlimit: 10;
@@ -1129,6 +1133,10 @@ polygon:hover {
     font-size: 7.5rem;
   }
 
+  h2 {
+    font-size: 2.56rem;
+  }
+
   .home {
     overflow: hidden;
   }
@@ -1169,6 +1177,10 @@ polygon:hover {
     height: auto;
   }
 
+  .about-subtitle {
+    font-size: 1.6rem;
+  }
+
   .about-text h2,
 .about-text p {
     padding: 20px 30px;
@@ -1194,9 +1206,9 @@ polygon:hover {
   .portfolio-link {
     position: absolute;
     top: 20px;
-    left: 0;
+    left: 30px;
     opacity: 0;
-    width: 100%;
+    width: calc(100% - 60px);
     height: calc(100% - 40px);
     border-radius: 8px;
     background-color: #fafaff;
@@ -1231,6 +1243,9 @@ polygon:hover {
 
   .contact-info {
     padding: 0 30px;
+  }
+  .contact-info h2 {
+    font-size: 2rem;
   }
 
   .footer-container {
@@ -1303,6 +1318,7 @@ polygon:hover {
 
   .portfolio-link {
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
   }

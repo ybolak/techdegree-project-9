@@ -6,6 +6,10 @@
 
 @media (min-width: $med-break) {
   h1 {
+    font-size: $font-size-desktop-xxl;
+  }
+
+  h2 {
     font-size: $font-size-desktop-xl;
   }
 
@@ -53,6 +57,10 @@
     }
   }
 
+  .about-subtitle {
+    font-size: $font-size-desktop-lg;
+  }
+
   .about-text {
     h2,
     p {
@@ -82,9 +90,9 @@
   .portfolio-link {
     position: absolute;
     top: 20px;
-    left: 0;
+    left: 30px;
     opacity: 0;
-    width: 100%;
+    width: calc(100% - 60px);
     height: calc(100% - 40px);
     border-radius: 8px;
     background-color: rgba($color-white, 1);
@@ -125,6 +133,10 @@
 
   .contact-info {
     padding: 0 30px;
+
+    h2 {
+      font-size: $font-size-mobile-xl;
+    }
   }
 
   .footer-container {
@@ -199,6 +211,7 @@
   }
   .portfolio-link {
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
   }

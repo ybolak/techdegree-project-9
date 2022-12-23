@@ -29,21 +29,8 @@ a {
   text-align: center;
 
   span {
-    position: relative;
     text-align: center;
     padding: 20px 0;
-
-    // &::after {
-    //   position: absolute;
-    //   content: "";
-    //   width: 0.5rem;
-    //   height: 0.5rem;
-    //   left: 50%;
-    //   bottom: 0;
-    //   transform: translateX(-50%);
-    //   background-color: white;
-    //   border-radius: 50%;
-    // }
   }
 }
 
